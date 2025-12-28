@@ -39,10 +39,13 @@ python3 train_lgbm.py
 
 #### Сводная таблица (WMAE ↓)
 
-| model | holdout WMAE (last14 train) | Kaggle private | Kaggle public | holdout file | submission file |
+| model | holdout WMAE (last14 train) | Kaggle private | Kaggle public | submission file |
 |---|---:|---:|---:|---|---|
-| lgbm | 19.5840 | 22.99185 | 23.01767 | `submissions/pred_last14_lgbm.csv` | `submissions/submission_lgbm.csv` |
-| lama_1 | 20.3457 | 23.61989 | 23.53737 | `submissions/pred_last14_lama_1.csv` | `submissions/submission_lama_1.csv` |
-| baseline | 33.2472 | 35.25098 | 35.51571 | `submissions/pred_last14_baseline.csv` | `submissions/submission_baseline.csv` |
-| lama_2 | 70.7542 | 73.13892 | 72.24135 | `submissions/pred_last14_lama_2.csv` | `submissions/submission_lama_2.csv` |
+| lgbm | 19.5840 | 22.99185 | 23.01767 | `submissions/submission_lgbm.csv` |
+| lama_1 | 20.3457 | 23.61989 | 23.53737 | `submissions/submission_lama_1.csv` |
+| baseline | 33.2472 | 35.25098 | 35.51571 | `submissions/submission_baseline.csv` |
+| lama_2 | 70.7542 | 73.13892 | 72.24135 | `submissions/submission_lama_2.csv` |
 
+### Доказательства
+
+![kaggle screenshot](images/kaggle.png)
