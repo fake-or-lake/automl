@@ -1,15 +1,19 @@
-### Rohlik Sales Forecasting Challenge v2
+### Rohlik Sales Forecasting Challenge
+
+Rohlik Group, a leading European e-grocery innovator, is revolutionising the food retail industry. We operate across 11 warehouses in Czech Republic, Germany, Austria, Hungary, and Romania.
+
+Нужно предсказывать продажи в разных точках и разных товаров
 
 ### Ключевые выводы
 
-- **Лучшая модель**: ручной `lgbm` (target-stats + LGBM GPU) — лучший holdout и лучший private/public
+- **Лучшая модель**: ручной `lgbm` (target-stats + LGBM GPU) лучший holdout и лучший private/public
 - **LAMA AutoML(`lama_1`)**: близко к ручной, но уступает
 - **AutoTS (`lama_2`)**: в текущей конфигурации очень плохо, вероятно есть переобучение тренду
 
 ### Структура
 
 - **`rohlik/`**: общие утилиты (чтение данных, фичи, метрики, сплиты, сохранение предиктов/сабмитов)
-- **`train_baseline.py`**: baseline (mean-by-`unique_id`)
+- **`train_baseline.py`**: baseline (mean-by-unique_id)
 - **`train_lama_1.py`**: LightAutoML TabularAutoML
 - **`train_lama_2.py`**: LightAutoML AutoTS (time-series preset)
 - **`train_lgbm.py`**: ручная модель на LightGBM + `TargetStatsFeaturizer` + Optuna (GPU)
@@ -23,8 +27,8 @@
 - пишут артефакты в `./submissions/`
 - делают **outer holdout** как последние `14` дней трейна
 - создают **2 файла**:
-  - `submissions/pred_last14_<config>.csv` — предикты на holdout
-  - `submissions/submission_<config>.csv` — сабмит для Kaggle
+  - `submissions/pred_last14_<config>.csv` предикты на holdout
+  - `submissions/submission_<config>.csv` сабмит для Kaggle
 
 Запуск:
 
