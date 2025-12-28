@@ -1,0 +1,16 @@
+numpy==2.4.0
+pandas==2.3.3
+scikit-learn==1.8.0
+
+matplotlib==3.10.8
+seaborn==0.13.2
+ipython==9.8.0
+ipykernel==7.1.0
+
+lightgbm==4.6.0
+optuna==4.6.0
+
+catboost==1.2.8
+statsmodels==0.14.0
+
+LightAutoML==0.4.2
